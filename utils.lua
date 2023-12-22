@@ -37,7 +37,7 @@ end
 function utils.printMonster(creature)
 
     -- Health Calculate
-    local healthRate = math.floor((creature.MAXHEALTH / creature.health) * 10)
+    local healthRate = math.floor((creature.health / creature.MAXHEALTH) * 10)
 
 
     print("| "..creature.name)
@@ -52,5 +52,12 @@ function utils.printMonster(creature)
 
 
 end
+
+function utils.ask()
+    io.write("> ")
+    local anwser = io.read("*n")
+
+    return anwser
+end    
 
 return utils

@@ -39,7 +39,7 @@ function actions.build()
     local regenLife = {
         description = "Regenera sua vida.",
         requeriment = function (playerData, creatureData)
-            return playerData.potions >= 1 
+            return playerData.potions >= 1
         end,
 
         execute = function (playerData, creatureData)
@@ -53,6 +53,7 @@ function actions.build()
             print(string.format("%s usou uma pocao e recuperou alguns pontos de vida!", playerData.name))
         end
     }
+
 
     actions.list[#actions.list+1] = mageAttack
     actions.list[#actions.list+1] = regenLife

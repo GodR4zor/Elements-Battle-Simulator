@@ -55,7 +55,9 @@ end
 
 function utils.ask()
     io.write("> ")
-    local anwser = io.read("*n")
+    -- Pede um numero, caso nao seja um numero, recebe o valor como string
+    local anwser = io.read("*n") or io.read()
+
 
     return anwser
 end    
